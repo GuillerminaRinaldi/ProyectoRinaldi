@@ -9,7 +9,7 @@ const cancion6 = "Karma Chameleon de Boy George"
 let avanzar = true
 while(avanzar){
     let edad = parseInt(prompt("Bienvenido!!! Ingrese su edad"))
-    let idioma = prompt("Ingresa 'espanol' si te gusta la musica en espanol u 'otro' si preferis musica en otro idioma")
+    let idioma = parseIntprompt("Ingresa 'espanol' si te gusta la musica en espanol u 'otro' si preferis musica en otro idioma")
     switch(idioma) {
         case 1:
             let idioma = "espanol"
