@@ -6,14 +6,15 @@ const cancion4 = "Sorry de Justin Bieber"
 const cancion5 = "Crimen de Gustavo Cerati"
 const cancion6 = "Karma Chameleon de Boy George"
 
+const canciones = [cancion1, cancion2, cancion3, cancion4, cancion5, cancion6]
+
 let avanzar = true
 while(avanzar){
     let edad = parseInt(prompt("Bienvenido!!! Ingrese su edad"))
-    let idioma = parseInt(prompt("Ingresa espanol si te gusta la musica en espanol o ingles si preferis musica en otro idioma"))
+    let idioma = parseInt(prompt("Ingresa 1 si te gusta la musica en espanol o 2 si preferis musica en otro idioma"))
     switch(idioma) {
         case 1:
-            let idioma = "espanol"
-            if (edad <= 6 && idioma == espanol) {
+            if (edad <=6 && idioma ===1) {
                 console.log("Tengo 6 o menos y quiero musica en espanol")
                 alert("Tu cancion es: "+cancion1)
             } else {
@@ -22,7 +23,7 @@ while(avanzar){
             } 
             break
         case 2:
-            if ((edad >= 7 && edad<= 18) && (idioma == espanol)){
+            if ((edad >=7 && edad<=18) && (idioma ===1)){
                 console.log("Tengo entre 7 y 18 y quiero musica en espanol")
                 alert("Tu cancion es: "+cancion3)
             } else {
@@ -31,7 +32,7 @@ while(avanzar){
             } 
             break
         case 3:
-            if (edad > 18 && idioma == espanol) {
+            if (edad >18 && idioma ===1) {
                 console.log("Tengo mas de 18 y quiero musica en espanol")
                 alert("Tu cancion es: "+cancion5)
             } else {
@@ -49,11 +50,15 @@ while(avanzar){
             avanzar = false
             console.log("Gracias por ingresar! Que tenga un lindo dia")
             alert("Muchas gracias por su visita!")
+        } else {
+            let nuevacancion = prompt("Que cancion le gustaria escuchar?")
+            canciones.push(nuevacancion)
+            console.log("Me gustaria escuchar: "+nuevacancion)
         }
     }
+console.log(canciones)
+    
 
-    const canciones = [cancion1, cancion2, cancion3, cancion4, cancion5, cancion6]
-    canciones.push("La Vaca Lola de La Granja de Zenon")
 
 
 
