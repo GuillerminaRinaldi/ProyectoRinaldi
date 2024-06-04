@@ -1,43 +1,33 @@
 let idioma = "espanol"
-const cancion1 = "La Primavera Llego de El Reino Infantil"
-const cancion2 = "Old Mc Donald had a Farm de Super Simple Songs"
-const cancion3 = "Bzrp Music Sessions, Vol 53 con Shakira"
-const cancion4 = "Sorry de Justin Bieber"
-const cancion5 = "Crimen de Gustavo Cerati"
-const cancion6 = "Karma Chameleon de Boy George"
+const cancion1 = "Bzrp Music Sessions, Vol 53 con Shakira"
+const cancion2 = "De Musica Ligera de Soda Stereo"
+const cancion3 = "Sorry de Justin Bieber"
+const cancion4 = "Sweet Child'o Mine de Gun's and Roses"
 
-const canciones = [cancion1, cancion2, cancion3, cancion4, cancion5, cancion6]
+
+const canciones = [cancion1, cancion2, cancion3, cancion4]
 
 let avanzar = true
 while(avanzar){
-    let edad = parseInt(prompt("Bienvenido!!! Ingrese su edad"))
-    let idioma = parseInt(prompt("Ingresa 1 si te gusta la musica en espanol o 2 si preferis musica en otro idioma"))
-    switch(idioma) {
+    let idioma = parseInt(prompt("Bienvenido!!! Ingrese 1 para musica en espanol o 2 para musica en ingles"))
+    let genero = parseInt(prompt("Ingresa 1 si te gusta la musica pop o 2 si preferis rock"))
+    switch(genero) {
         case 1:
-            if (edad <=6 && idioma ===1) {
-                console.log("Tengo 6 o menos y quiero musica en espanol")
-                alert("Tu cancion es: "+cancion1)
+            if (idioma ===1 && genero===1) {
+                console.log("Quiero musica pop en espanol")
+                alert("Tu cancion pop en espanol es: "+cancion1)
             } else {
-                console.log("Tengo 6 o menos y quiero musica en otro idioma")
-                alert("Tu cancion es: "+cancion2)
-            } 
+                console.log("Quiero rock en ingles")
+                alert("Tu cancion de rock en ingles es: "+cancion4)
+            }
             break
         case 2:
-            if ((edad >=7 && edad<=18) && (idioma ===1)){
-                console.log("Tengo entre 7 y 18 y quiero musica en espanol")
-                alert("Tu cancion es: "+cancion3)
+            if (idioma ===2 && genero===1) {
+                console.log("Quiero musica pop en ingles")
+                alert("Tu cancion pop en ingles es: "+cancion3)
             } else {
-                console.log("Tengo entre 7 y 18 y quiero musica en otro idioma")
-                alert("Tu cancion es: "+cancion4)
-            } 
-            break
-        case 3:
-            if (edad >18 && idioma ===1) {
-                console.log("Tengo mas de 18 y quiero musica en espanol")
-                alert("Tu cancion es: "+cancion5)
-            } else {
-                console.log("Tengo mas de 18 y quiero musica en otro idioma")
-                alert("Tu cancion es: "+cancion6)
+                console.log("Quiero rock en espanol")
+                alert("Tu cancion de rock en espanol es: "+cancion2)
             } 
             break
         default:
@@ -51,7 +41,7 @@ while(avanzar){
             console.log("Gracias por ingresar! Que tenga un lindo dia")
             alert("Muchas gracias por su visita!")
         } else {
-            let nuevacancion = prompt("Que cancion le gustaria escuchar?")
+            let nuevacancion = prompt("Que cancion le gustaria escuchar mas adelante?")
             canciones.push(nuevacancion)
             console.log("Me gustaria escuchar: "+nuevacancion)
         }
